@@ -1,0 +1,174 @@
+$blue: #000055
+$white: #ffffff
+$black: #1B1B1F
+$grey: rgba(255, 255, 255, 0.70)
+
+$font-suisse-intl-reg: SuisseIntl-Regular, sans-serif
+$font-handjet-med: Handjet-Medium, sans-serif
+$font-legal: DINPro-CondLight, sans-serif
+
+body
+  overscroll-behavior: none
+  background: $blue
+  img
+    max-width: 100%
+    height: auto
+.main-link
+  position: fixed
+  width: 100%
+  height: 100%
+.land
+  height: calc(100% - 83px)
+  position: relative
+  overflow: hidden
+  z-index: 10
+  pointer-events: none
+  background: url('../img/bg-desk.jpg') no-repeat 50% 0/cover
+  @media screen and (min-width: 600px) and (orientation: landscape) and (min-height: 501px)
+    background: url('../img/bg-desk.jpg') no-repeat 50% 0/cover
+  @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
+    background: url('../img/bg-tab.jpg') no-repeat 50% 0/cover
+  @media screen and (max-width: 600px) and (orientation: portrait)
+    background: url("../img/bg-mob.jpg") no-repeat 50% 0%/cover
+  @media (max-width: 950px) and (orientation: landscape) and (max-height: 500px)
+    background: url("../img/bg-landscape.jpg") no-repeat 100% 100%/cover
+  &__wrap
+    height: 100%
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &:before
+      content: ""
+      background: linear-gradient(180deg, rgba(0, 0, 61, 0.00) 0%, #00003D 100%)
+      height: 20%
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+  &__logo
+    position: absolute
+    top: 0
+    left: 0
+    max-width: 515px
+    width: 28%
+  &__title
+    width: 100%
+    margin-top: 38px
+    z-index: 1
+  &__main
+    display: flex
+    flex-direction: column
+    padding: 0 3.5% 0 9%
+    z-index: 1
+    &-top
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+  &__fund
+    z-index: 1
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    &-img
+      background: url("../img/fund.png") no-repeat 50% 0/contain
+      position: relative
+      width: 533px
+      height: 84px
+    &-txt
+      margin-left: 16px
+      color: $white
+      font-family: $font-handjet-med
+      font-size: 48px
+      line-height: 48px
+      text-transform: uppercase
+      display: flex
+      flex-direction: column
+      span
+        color: $white
+        font-family: $font-handjet-med
+        font-size: 48px
+        line-height: 48px
+  &__btn
+    font-family: $font-handjet-med
+    font-size: 44px
+    color: $white
+    line-height: 21px
+    letter-spacing: 4.4px
+    text-transform: uppercase
+    cursor: pointer
+    width: 368px
+    height: 105px
+    display: flex
+    justify-content: center
+    align-items: center
+    pointer-events: initial
+    &-cont
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 586px
+      height: 216px
+      background: url('../img/btn-desk.png') no-repeat 50% 50%/cover
+      transition: 0.3s ease
+  &__info
+    width: 690px
+    z-index: 1
+    color: $grey
+    font-family: $font-suisse-intl-reg
+    font-size: 12px
+    line-height: 20px
+    opacity: 0.7
+    margin: -38px 0 48px
+
+.footer
+  background: $blue
+  height: 83px
+  display: flex
+  padding: 5px 20px 5px 35px
+  align-items: center
+  justify-content: space-between
+  z-index: 11
+  pointer-events: none
+  position: relative
+  &__wrap
+    display: flex
+    align-items: center
+  &__text
+    color: $white
+    font-family: $font-suisse-intl-reg
+    font-size: 14px
+    line-height: 22px
+    max-width: 975px
+    opacity: .8
+  &__licensed
+    display: flex
+    align-items: center
+    gap: 18px
+    margin: 0 35px 0 auto
+    flex-shrink: 0
+  &__btns
+    display: flex
+    align-items: center
+  &__appstore
+    display: block
+    background: url("../img/appleBtn.png") no-repeat 0 0/contain
+    width: 114px
+    height: 38px
+    pointer-events: initial
+  &__googlePlay
+    display: block
+    background: url("../img/googleBtn.svg") no-repeat 0 0/contain
+    width: 128px
+    height: 38px
+    margin-left: 10px
+    pointer-events: initial
+.legal
+  font-family: $font-legal
+  font-size: 4.7vw
+  padding: 0 15px
+  text-align: center
+  background: $white
+  z-index: 10
+  pointer-events: none
